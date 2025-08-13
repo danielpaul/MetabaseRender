@@ -7,10 +7,4 @@ services:
     autoDeploy: false
     envVars:
       - key: MB_DB_CONNECTION_URI
-        fromDatabase:
-          name: elephant
-          property: connectionString
-databases:
-  - name: elephant
-    databaseName: metabasedb
-    ipAllowList: [] # only allow internal connections
+        value: "" # set this manually or remove this line entirely if you want to use the default H2 database
