@@ -12,4 +12,4 @@ services:
       - key: MB_ENCRYPTION_SECRET_KEY
         value: "" # generate (`openssl rand -base64 48`) and set manually
       - key: JAVA_TOOL_OPTIONS
-        value: "-Xmx1024m"
+        value: "-Xmx1024m" # Optional: Increase JVM heap size
