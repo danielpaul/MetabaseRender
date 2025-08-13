@@ -3,6 +3,7 @@ services:
     name: metabase
     env: docker
     repo: https://github.com/danielpaul/MetabaseRender.git # optional
+    region: frankfurt # EU region
     plan: standard # ensure that metabase has at least 2GB of RAM (defaults to starter)
     autoDeploy: false
     envVars:
@@ -10,3 +11,5 @@ services:
         value: "" # set this manually or remove this line entirely if you want to use the default H2 database
       - key: MB_ENCRYPTION_SECRET_KEY
         value: "" # generate (`openssl rand -base64 48`) and set manually
+      - key: JAVA_TOOL_OPTIONS
+        value: "-Xmx1024m"
