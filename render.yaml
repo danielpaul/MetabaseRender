@@ -8,3 +8,5 @@ services:
     envVars:
       - key: MB_DB_CONNECTION_URI
         value: "" # set this manually or remove this line entirely if you want to use the default H2 database
+      - key: MB_ENCRYPTION_SECRET_KEY
+        value: "" # generate (`openssl rand -base64 48`) and set manually
